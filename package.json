@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "a2-jonahWeber",
+  "version": "1.0.0",
+  "description": "Deadline Stack - a two-tier to-do list app for CS4241 Assignment 2",
   "author": "",
   "scripts": {
     "start": "node server.js"

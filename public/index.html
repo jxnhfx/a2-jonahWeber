@@ -1,18 +1,70 @@
 <!doctype html>
 <html lang='en'>
   <head>
-    <title>CS4241 Assignment 2</title>
     <meta charset='utf-8' />
-    <script src='js/main.js'></script>
+    <title>Weekly HW Calculator</title>
+
+    <link href='https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap' rel='stylesheet'>
+
     <link rel='stylesheet' href='css/main.css' />
-    
-    <!-- get rid of favicon error -->
-    <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+
+    <script src='js/main.js' defer></script>
   </head>
   <body>
-    <form>
-      <input type='text' id='yourname' value='your name here'>
-      <button>submit</button>
-    </form>
+    <header id='site-header'>
+      <h1>Weekly HW Calculator</h1>
+      <p class='tagline'>Add a task and a priority. The server will calculate when it's due.</p>
+    </header>
+
+    <main id='app'>
+      <section id='entry-section' class='panel' aria-labelledby='entry-heading'>
+        <h2 id='entry-heading'>Add a task</h2>
+
+        <form id='todo-form'>
+          <div class='field'>
+            <label for='task'>Task</label>
+            <input type='text' id='task' name='task' placeholder='e.g. Finish CS4241 assignment 2' required maxlength='120' />
+          </div>
+
+          <div class='field'>
+            <label for='priority'>Priority</label>
+            <select id='priority' name='priority'>
+              <option value='high'>High &mdash; due in 1 day</option>
+              <option value='medium' selected>Medium &mdash; due in 3 days</option>
+              <option value='low'>Low &mdash; due in 7 days</option>
+            </select>
+          </div>
+
+          <button type='submit' id='add-btn' class='btn btn-primary'>Add task</button>
+        </form>
+
+        <p id='form-status' role='status'></p>
+      </section>
+
+      <section id='results-section' class='panel' aria-labelledby='results-heading'>
+        <h2 id='results-heading'>Your tasks</h2>
+
+        <table id='todo-table'>
+          <thead>
+            <tr>
+              <th scope='col'>Task</th>
+              <th scope='col'>Priority</th>
+              <th scope='col'>Created</th>
+              <th scope='col'>Deadline</th>
+              <th scope='col'>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody id='todo-body'>
+            <!-- populated by js/main.js -->
+          </tbody>
+        </table>
+
+        <p id='empty-state' hidden>No tasks yet, add one above!</p>
+      </section>
+    </main>
+
+    <footer id='site-footer'>
+      <p>CS4241 &middot; Assignment 2: Short Stack</p>
+    </footer>
   </body>
 </html>
