@@ -20,4 +20,5 @@ and sends the new task to the server with fetch(); the server computes the deriv
 with the entire updated dataset, which the client uses to re-render the results table in place. The same pattern 
 is used for deletes.
 
-AI Assistance: Color scheme decisions along with some minor visual adjustments in  main.css
+## AI Assistance 
+Color scheme decisions along with some minor visual adjustments in  main.css
