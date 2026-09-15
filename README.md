@@ -19,4 +19,5 @@ Single Page App: Submitting the form never reloads the page. public/js/main.js c
 and sends the new task to the server with fetch(); the server computes the derived deadline field and responds 
 with the entire updated dataset, which the client uses to re-render the results table in place. The same pattern 
 is used for deletes.
-## Design/Evaluation Achievements
+
+AI Assistance: Color scheme decisions along with some minor visual adjustments in  main.css
