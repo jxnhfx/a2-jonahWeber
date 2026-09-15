@@ -7,7 +7,6 @@ medium / low). the **server** stamps it with a creation time and derives a
 side, laid out with **flexbox**. Adding or deleting a task calls the
 server's JSON API and re-renders the table from the response without reloading the page
 
-Live app: _add your Render URL here once deployed, e.g. https://a2-yourname.onrender.com_
 
 ### Running it locally
 
